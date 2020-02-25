@@ -1,0 +1,23 @@
+{
+  "name": "rpsls-game",
+  "version": "1.0.0",
+  "description": "We set out to build a simple implementation of rock paper scissors that was tested.\r We will be using vanilla JavaScript and Jasmine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekingcode18/rock-paper-scissors-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seekingcode18/rock-paper-scissors-game/issues"
+  },
+  "homepage": "https://github.com/seekingcode18/rock-paper-scissors-game#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
