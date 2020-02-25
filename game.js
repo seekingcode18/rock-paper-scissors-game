@@ -16,5 +16,23 @@ module.exports = class Game {
         }
         return index;
     }
+
+    play(user, computer){
+        if(user === computer){
+            return "tie";
+        }
+        else if(user === 2 && computer == 0){
+            return "c"
+        }
+        else if(user === 0 && computer == 2){
+            return "u"
+        }
+        else if(user > computer){
+            return "u"
+        }
+        else{
+            return "c"
+        }
+    }
 }
 

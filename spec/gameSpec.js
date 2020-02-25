@@ -10,7 +10,7 @@ describe("Rock paper scissors game", function(){
         it("should set computer variable to random number based on length of array", function(){
             let options = ['rock', 'paper', 'scissors'];
             let game = new Game(options);
-            let c = game.computerChoice();
+            let c = game.computerChooser();
             expect(c).toBeGreaterThan(-1);
             expect(c).toBeLessThan(3);
         })
@@ -33,4 +33,34 @@ describe("Rock paper scissors game", function(){
         })
     })
 
+    describe("Comparison Logic", function(){
+        let options = ['rock', 'paper', 'scissors'];
+        let game = new Game(options);
+        it("should return the winner if paper", function(){
+            let u = game.userChooser("paper");
+            let c = 0;
+            expect(game.play(u, c)).toEqual('u');
+
+            c = 1;
+            expect(game.play(u, c)).toEqual('tie');
+
+            c = 2;
+            expect(game.play(u, c)).toEqual('c');
+        })
+
+        it("should return the winner if rock", function(){
+            let u = game.userChooser("rock");
+            let c = 0;
+            expect(game.play(u, c)).toEqual('tie');
+
+            c = 2;
+            expect(game.play(u, c)).toEqual('u');
+        })
+
+        it("should return the winner if scissors", function(){
+            let u = game.userChooser("scissors");
+            let c = 2;
+            expect(game.play(u, c)).toEqual('tie');
+        })
+    })
 })
